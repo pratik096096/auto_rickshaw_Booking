@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/auto_rickshaw_Booking/static/css/main.34643d26.css",
+    "main.js": "/auto_rickshaw_Booking/static/js/main.13ac131a.js",
+    "index.html": "/auto_rickshaw_Booking/index.html",
+    "main.34643d26.css.map": "/auto_rickshaw_Booking/static/css/main.34643d26.css.map",
+    "main.13ac131a.js.map": "/auto_rickshaw_Booking/static/js/main.13ac131a.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.34643d26.css",
+    "static/js/main.13ac131a.js"
+  ]
+}
