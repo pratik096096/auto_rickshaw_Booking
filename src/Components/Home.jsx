@@ -13,9 +13,7 @@ const Home = () => {
         navigate('/vehicles');
     };
 
-    const handleAdminPage = () => {
-        navigate('/adminLogin');
-    };
+    
 
     return (
         <div className="container">
@@ -29,7 +27,7 @@ const Home = () => {
                     
                 </select>
                 <button className="start-button" onClick={handleStartBooking}>Start Booking</button> <br /><br />
-                <button className="admin-button" onClick={handleAdminPage}>Admin Login</button>
+                
             </div>
         </div>
     );

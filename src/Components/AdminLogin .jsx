@@ -10,7 +10,7 @@ const AdminLogin = () => {
 
     const handleLogin = async (e) => {
         e.preventDefault();
-
+    
         try {
             const response = await fetch('http://localhost:9090/api/admin/login', {
                 method: 'POST',
@@ -19,20 +19,24 @@ const AdminLogin = () => {
                 },
                 body: JSON.stringify({ username, password }),
             });
-
+    
             if (!response.ok) {
                 const errorData = await response.text();
-                setError(errorData);
+                console.error('Error response from backend:', errorData); // Debugging line
+                setError(errorData || 'Login failed. Please try again.');
                 return;
             }
-
-            
+    
+            const data = await response.json();
+            localStorage.setItem('adminToken', data.token);
+            localStorage.setItem('adminUsername', username);
             navigate('/admin');  
         } catch (err) {
+            console.error('Network or unexpected error:', err); // Debugging line
             setError('Something went wrong. Please try again.');
         }
     };
-
+    
     return (
         <div className="containerLogin">
             <h1 className="titleLogin">Admin Login</h1>

@@ -1,6 +1,7 @@
 
 import './App.css';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { useState,useEffect,Navigate } from 'react';
+import { BrowserRouter as Router, Routes, Route,useLocation  } from 'react-router-dom';
 import Header from './Components/Header';
 import Home from './Components/Home';
 import BookingPage from './Components/BookingPage';
@@ -15,9 +16,13 @@ import AdminRegister from './Components/AdminRegister ';
 import BookingSuccessPage from './Components/BookingSuccessPage ';
 
 function App() {
+  const location = useLocation();
+
+  const noHeaderPaths = ['/','/admin', '/adminLogin', '/adminRegister'];
+
   return (
-    <Router>
-      <Header />
+    <>
+      {!noHeaderPaths.includes(location.pathname) && <Header />}
       <Routes>
         <Route path="/" element={<Login />} />
         <Route path="/home" element={<Home />} />
@@ -29,10 +34,19 @@ function App() {
         <Route path="/register" element={<Register />} />
         <Route path="/adminRegister" element={<AdminRegister />} />
         <Route path="/adminLogin" element={<AdminLogin />} />
-        <Route path="/booking-success" element={<BookingSuccessPage  />} />
+        <Route path="/booking-success" element={<BookingSuccessPage />} />
       </Routes>
+    </>
+  );
+}
+
+// Wrap App in Router to provide routing context
+function Root() {
+  return (
+    <Router>
+      <App />
     </Router>
   );
 }
 
-export default App;
+export default Root;
