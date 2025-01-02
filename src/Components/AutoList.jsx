@@ -48,10 +48,11 @@ const AutoList = () => {
                         <p>Vehicle Number: {driver.vehicleNumber}</p>
                         <p>Auto Type: {driver.autoType}</p>
                         <p>Available: {driver.available ? 'Yes' : 'No'}</p>
-                        <p>Driver Email: {driver.email}</p> 
+                        <p>Driver Email: {driver.email}</p>
                         <button
                             onClick={() => handleSelectDriver(driver)}
                             className="confirmation-link"
+                            disabled={!driver.available} // Disable button if not available
                         >
                             Select Driver
                         </button>
@@ -60,6 +61,7 @@ const AutoList = () => {
             )}
         </div>
     );
+    
 }
 
 export default AutoList;

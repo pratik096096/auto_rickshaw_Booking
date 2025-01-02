@@ -27,6 +27,7 @@ const Login = () => {
 
             const data = await response.json();
             localStorage.setItem('token', data.token);
+            localStorage.setItem('userMail',data.email);
             navigate('/home');
         } catch (err) {
             setError('Something went wrong. Please try again.');

@@ -1,23 +1,35 @@
-import React, { useState } from 'react';
-import { useLocation,useNavigate } from 'react-router-dom';
+import React, { useEffect, useState } from 'react';
+import { useLocation, useNavigate } from 'react-router-dom';
 
 const ConfirmationPage = () => {
     const location = useLocation();
     const navigate = useNavigate();
+    
     const { auto, currentLocation, destination } = location.state || {};
 
     const [userEmail, setUserEmail] = useState('');
+
+    
+
+    useEffect(()=>{
+        const loggedInEmail = localStorage.getItem('userMail');
+        setUserEmail(loggedInEmail);
+    },[]);
 
     const handleConfirmBooking = async (e) => {
         e.preventDefault();
 
         const bookingDetails = {
             autoId: auto.id,
+            autoName: auto.name,
+            vehicleNumber: auto.vehicleNumber,
+            autoType: auto.autoType,
+            available: auto.available,
+            driverEmail: auto.email,
+            driverId: auto.driverId,
             currentLocation,
             destination,
-            userEmail: userEmail, 
-            driverEmail: auto.email,
-            driverId: auto.driverId
+            userEmail: userEmail, // User's email
         };
 
         try {
@@ -35,7 +47,6 @@ const ConfirmationPage = () => {
                 return;
             }
 
-            
             setUserEmail('');
             navigate('/booking-success');
         } catch (err) {
@@ -67,8 +78,7 @@ const ConfirmationPage = () => {
                         id="user-email"
                         className="form-input"
                         value={userEmail}
-                        onChange={(e) => setUserEmail(e.target.value)}
-                        required
+                        readOnly
                     />
                 </div>
                 <button type="submit" className="form-button">Confirm Booking</button>
@@ -77,4 +87,4 @@ const ConfirmationPage = () => {
     );
 };
 
-export default ConfirmationPage;    
+export default ConfirmationPage;

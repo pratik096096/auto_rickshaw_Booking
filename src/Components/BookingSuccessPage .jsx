@@ -10,6 +10,13 @@ const BookingSuccessPage = () => {
             <button onClick={() => navigate('/home')} className="form-button">
                 Home
             </button>
+            <button
+                onClick={() => navigate('/viewBookings')}
+                className="form-button"
+                style={{ marginLeft: '20px' }}
+            >
+                View Bookings
+            </button>
         </div>
     );
 };

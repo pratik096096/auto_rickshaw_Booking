@@ -14,6 +14,7 @@ import Register from './Components/Register';
 import AdminLogin from './Components/AdminLogin ';
 import AdminRegister from './Components/AdminRegister ';
 import BookingSuccessPage from './Components/BookingSuccessPage ';
+import ViewBookings from './Components/ViewBookings';
 
 function App() {
   const location = useLocation();
@@ -35,6 +36,7 @@ function App() {
         <Route path="/adminRegister" element={<AdminRegister />} />
         <Route path="/adminLogin" element={<AdminLogin />} />
         <Route path="/booking-success" element={<BookingSuccessPage />} />
+        <Route path="/viewBookings" element={<ViewBookings />} />
       </Routes>
     </>
   );

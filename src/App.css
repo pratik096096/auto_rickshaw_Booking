@@ -606,3 +606,58 @@ button[type="button"]:hover {
     color: #ffffff;
     background-color: #28a745;
   }
+
+
+  .viewCont {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+}
+
+.viewCont .viewH1{
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.booking-cardView {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    padding: 15px;
+    text-align: left;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.booking-cardView:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.booking-cardView .viewH1 {
+    font-size: 1.5rem;
+    color: #007BFF;
+    margin-bottom: 10px;
+}
+
+.booking-cardView .viewP {
+    font-size: 1rem;
+    color: #555;
+    margin: 5px 0;
+}
+
+/* @media screen and (min-width: 600px) {
+    .viewCont {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .booking-cardView {
+        flex: 0 0 calc(48% - 10px);
+        margin-bottom: 20px;
+    }
+} */

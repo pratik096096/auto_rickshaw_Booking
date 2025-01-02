@@ -27,6 +27,7 @@ const Home = () => {
                     
                 </select>
                 <button className="start-button" onClick={handleStartBooking}>Start Booking</button> <br /><br />
+                <button onClick={()=>navigate('/viewBookings')}>View Bookings</button>
                 
             </div>
         </div>
