@@ -1,6 +1,6 @@
 
 import './App.css';
-import { useState,useEffect,Navigate } from 'react';
+
 import { BrowserRouter as Router, Routes, Route,useLocation  } from 'react-router-dom';
 import Header from './Components/Header';
 import Home from './Components/Home';
@@ -20,7 +20,7 @@ import DriverConfirmedData from './Components/DriverConfirmedData';
 function App() {
   const location = useLocation();
 
-  const noHeaderPaths = ['/','/admin', '/adminLogin', '/adminRegister','/driverBookings'];
+  const noHeaderPaths = ['/','/register','/admin', '/adminLogin', '/adminRegister','/driverBookings'];
 
   return (
     <>
