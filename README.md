@@ -1,18 +1,42 @@
-website : https://pratik096096.github.io/auto_rickshaw_Booking/
+# 🚕 Auto Rickshaw Booking - Belagavi
 
-note : press on home button when you visit the website.
+A web application for booking auto rickshaws in Belagavi, Karnataka. This platform connects passengers with auto rickshaw drivers, offering convenient local transportation solutions.
 
-Auto Rickshaw Booking :
+## ✨ Features
 
-Tech used :
-React.js , Spring boot , MongoDB.
+- **User Authentication**
+  - Secure registration and login system for passengers
+  - Separate authentication for drivers/admin
 
-A website created for auto rickshaw booking particularly for my city Belgaum,Karnataka.
-In this website user can choose places to get picked from anywhere in Belgaum city 
-just choose the city and set your current and destination and select the type of auto you need like 3 seat or 5-6 seat , you can choose the available driver
-for the booking and finally confirm the booking.
+- **Booking System**
+  - Select pickup and drop locations within Belagavi city
+  - Choose between 3-seater or 5-6 seater auto rickshaws
+  - View and select from available drivers
+  - Real-time booking confirmation
+  - Email notifications with booking details
 
-user can create register and login 
-as well as for admin where the driver register themselves for auto driver.
+- **Driver/Admin Portal**
+  - Driver registration with vehicle details
+  - Update driver availability status
+  - Manage driver profiles (update/delete)
+  - Track bookings and passenger details
 
-note : backend is not hosted so you might be able to use the website when the server is closed from my system.
+## 🛠️ Tech Stack
+
+- **Frontend**: React.js
+- **Backend**: Spring Boot
+- **Database**: MongoDB
+
+
+## 🚀 Future Enhancements
+
+- [ ] Live location tracking
+- [ ] In-app payment integration
+- [ ] Rating system for drivers
+
+## ⚠️ Important Note
+
+The backend is currently not hosted, which means:
+- You'll need to run the backend locally to test full functionality
+- API endpoints won't work in the deployed version
+- Database operations require local MongoDB setup
