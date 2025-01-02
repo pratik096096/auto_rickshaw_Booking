@@ -21,7 +21,7 @@ const Home = () => {
             <p className="description">Book an auto rickshaw easily and get picked up from anywhere.</p>
             <div className="city-selector">
                 <label htmlFor="city">Select Your City:</label>
-                <select id="city" value={city} onChange={handleCityChange}>
+                <select id="city"  value={city} onChange={handleCityChange}>
                     <option value="">Select a city</option>
                     <option value="Belagavi">Belagavi</option>
                     

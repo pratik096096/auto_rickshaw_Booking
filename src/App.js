@@ -15,11 +15,12 @@ import AdminLogin from './Components/AdminLogin ';
 import AdminRegister from './Components/AdminRegister ';
 import BookingSuccessPage from './Components/BookingSuccessPage ';
 import ViewBookings from './Components/ViewBookings';
+import DriverConfirmedData from './Components/DriverConfirmedData';
 
 function App() {
   const location = useLocation();
 
-  const noHeaderPaths = ['/','/admin', '/adminLogin', '/adminRegister'];
+  const noHeaderPaths = ['/','/admin', '/adminLogin', '/adminRegister','/driverBookings'];
 
   return (
     <>
@@ -37,6 +38,7 @@ function App() {
         <Route path="/adminLogin" element={<AdminLogin />} />
         <Route path="/booking-success" element={<BookingSuccessPage />} />
         <Route path="/viewBookings" element={<ViewBookings />} />
+        <Route path="/driverBookings" element={<DriverConfirmedData />} />
       </Routes>
     </>
   );

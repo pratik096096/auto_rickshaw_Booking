@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
+import DriverConfirmedData from "./DriverConfirmedData";
 
 const AdminPage = () => {
   const [name, setName] = useState("");
@@ -235,7 +236,13 @@ const AdminPage = () => {
       ) : (
         <p>No driver registered yet.</p>
       )}
+    
+     
+        <button onClick={()=>navigate('/driverBookings')} className="viewData">View Booking Data</button>
+      
+    
     </div>
+    
   );
 };
 

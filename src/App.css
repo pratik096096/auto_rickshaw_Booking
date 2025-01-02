@@ -661,3 +661,51 @@ button[type="button"]:hover {
         margin-bottom: 20px;
     }
 } */
+
+
+.dataCont {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+}
+
+.dataCont .dataH1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.dataCard {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    padding: 15px;
+    text-align: left;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.dataCard:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.dataCard .dataH2 {
+    font-size: 1.5rem;
+    color: #000000;
+    margin-bottom: 10px;
+}
+
+.dataCard .dataP {
+    font-size: 1rem;
+    color: #555;
+    margin: 5px 0;
+}
+
+.viewData{
+    position: absolute;
+    right: 350px;
+    margin-top: -80px;
+}
